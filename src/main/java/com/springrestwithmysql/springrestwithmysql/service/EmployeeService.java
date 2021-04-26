@@ -25,7 +25,7 @@ public class EmployeeService {
 	}
 	
 	//Get List of employee -GET
-	public List<Employee> showEmployeeList(List<Employee> emp) {
+	public List<Employee> showEmployeeList() {
 		return repo.findAll();
 	}
 	

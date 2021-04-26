@@ -31,16 +31,16 @@ public class EmployeeController {
 	}
 	
 	@GetMapping("/display")
-	public List<Employee> showAllEmployee(@RequestBody List<Employee> emp) { 
-		return service.showEmployeeList(emp);
+	public List<Employee> showAllEmployee() { 
+		return service.showEmployeeList();
 	}
 	
-	@GetMapping("/display/{id}")
+	@GetMapping("/displaybyid/{id}")
 	public Employee showEmployeeById(@PathVariable int id) {
 		return service.showEmployee(id);
 	}
 	
-	@GetMapping("/display/{name}")
+	@GetMapping("/displaybyname/{name}")
 	public Employee showEmployeeByName(@PathVariable String name) {
 		return service.showEmployeeByName(name);
 	}
@@ -55,7 +55,7 @@ public class EmployeeController {
 		return service.removeAllEmployee();
 	}
 	
-	@DeleteMapping("/remove/{id}")
+	@DeleteMapping("/removebyid/{id}")
 	public String deleteEmployee(@PathVariable int id) {
 		return service.removeEmployeeId(id);
 	}
